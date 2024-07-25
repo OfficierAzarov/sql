@@ -27,7 +27,7 @@ WHERE aah.DATE_NAISSANCE <= {{age_date}}
   AND ea.IDC_DECISION_MEDICALE = 1
 ORDER BY aah.ID_ADM_ADMINISTRE;
 
--- Procédure stockée :
+-- Encapsulation dans une fonction :
 
 CREATE OR REPLACE FUNCTION get_eligible_marins(age_date DATE, aptitude_date DATE)
 RETURNS TABLE (id_adm_administre INT) AS $$
